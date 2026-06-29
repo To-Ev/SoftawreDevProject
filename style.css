@@ -1,0 +1,116 @@
+:root{
+    --primary: #3b82f6;
+    --accent: #10b981;
+    --neutral: #f9fafb;
+    --dark: #1f2937;
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    color: var(--dark);
+    background: var(--neutral);
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary), var(--accent) );
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+header h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+header p {
+    margin-bottom: 2rem;
+    letter-spacing: -0.05em;
+}
+
+.btn {
+    background: var(--accent);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #059669;
+}
+
+.features {
+    display: flex;
+    /* flex-wrap: wrap; */
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 10px;
+}
+
+.feature{
+    /* flex: 1; */
+    padding: 3rem 1rem;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px hsla(0, 0%, 0%, 0.25);
+}
+.feature h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.7rem;
+}
+
+.pricing {
+    background: linear-gradient(135deg, var(--accent), var(--primary) );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 10rem;
+    color: var(--neutral);
+}
+.pricing h2 {
+    margin-bottom: 0.5rem;
+    font-size: 3rem;
+}
+
+footer {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: .1rem solid gray
+}
+nav {
+    margin: .5rem 0;
+}
+nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: gray;
+    transition: all;
+}
+nav a:hover {
+    color: var(--accent);
+}
+
+/* Media Queries */
+
+@media (max-width: 900px) {
+    .features {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        width: 80%;
+        margin: auto;
+    }
+    .feature{
+      width: 100%;
+      text-align: center;
+    }
+}
